@@ -1,5 +1,4 @@
 #ChocolateFixGame
-================
 
 ###Java clone of ThinkFun's "Chocolate Fix" game for an AP Computer Science project
 
