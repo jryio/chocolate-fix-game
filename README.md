@@ -18,30 +18,28 @@ the color of the piece or the shape, or both).
 
 ##Goals
  
- *Graphics
-  *Board (display)
-  *Menu Bar (Level selection, etc.)
-  *Clue Bar (Area to display graphically generated clues from Level Loader)
-  *Images for pieces (Photoshop renders)
-  *Optimization
-    *Double Buffered Image
-    *More (?)
-*Actions
-  *Mouselisteners working for different windows (Menu Bar, Board, Blue Bar)
-  *Method to add/remove pieces (keyboard, mouse, click/drag?)
-  *
- *Game Engine
-  *Rules
-    *Win Checking
-    *Maximum Pieces
-    *Maximum Colors
-  *Difficulty Selection
-  *Level Loading
-    *Parse levels, clues from XML file or .txt files (requires unique shorthand for 3x3 board).
-    *Send information to Graphics Engine to display Clues for the user.
-    *Alternative: Create 400+ images to load into the engine so that shapes and board orientation do not have to generated
-    each time.
-  *Save Game Progress
-    *Look into XML
-    *Look into .txt parsing
+ * Graphics
+  * Board (display)
+  * Menu Bar (Level selection, etc.)
+  * Clue Bar (Area to display graphically generated clues from Level Loader)
+  * Images for pieces (Photoshop renders)
+  * Optimization
+    * Double Buffered Image
+    * More (?)
+* Actions
+  * Mouselisteners working for different windows (Menu Bar, Board, Blue Bar)
+  * Method to add/remove pieces (keyboard, mouse, click/drag?)
+ * Game Engine
+  * Rules
+    * Win Checking
+    * Maximum Pieces
+    * Maximum Colors
+  * Difficulty Selection
+  * Level Loading
+    * Parse levels, clues from XML file or .txt files (requires unique shorthand for 3x3 board).
+    * Send information to Graphics Engine to display Clues for the user.
+    * Alternative: Create 400+ images to load into the engine so that shapes and board orientation do not have to generated each time.
+  * Save Game Progress
+    * Look into XML
+    * Look into .txt parsing
 
