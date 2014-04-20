@@ -2,6 +2,8 @@
 
 ###Java clone of ThinkFun's "Chocolate Fix" game for an AP Computer Science project
 
+######*Note: the game does not run at all, working on a stable build*
+
 ================
 
 ##[How the game works](http://www.marblesthebrainstore.com/files/rules/Chocolate_Fix_Rules.pdf)
@@ -12,6 +14,8 @@ squares, 3 triangles, and 3 cirlces, with one of each in brown, pink and tan.
 To play, a difficultly must be selected (which determines the ammount of information in the clues) and then clues are
 shown. Each "clue" is a section of the baord taken out of context with certain tiles filled with information (either
 the color of the piece or the shape, or both).
+
+Using the clues one has to contextualize the clues into different positions and coordinate whether the color and shape of the piece will fit there.
 
 ================
 
