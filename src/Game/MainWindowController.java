@@ -1,11 +1,9 @@
-package ChocolateGame;
+package Game;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-import javax.swing.JComponent;
-
-public class MouseController extends JComponent implements MouseListener {
+public class MainWindowController implements MouseListener{
 
 	public void mouseClicked(MouseEvent e) {
 		// TODO Auto-generated method stub
@@ -13,7 +11,7 @@ public class MouseController extends JComponent implements MouseListener {
 	}
 
 	public void mousePressed(MouseEvent e) {
-		
+		// TODO Auto-generated method stub
 		
 	}
 
