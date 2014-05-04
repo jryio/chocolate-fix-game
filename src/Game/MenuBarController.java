@@ -7,59 +7,52 @@ import java.awt.event.MouseListener;
 import View.MainWindow;
 import View.MenuBar;
 
-public class MenuBarController extends Component implements MouseListener
-{
+public class MenuBarController extends Component implements MouseListener {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 	String pressed = "";
-	
-	
+
+	MenuBar menu = new MenuBar();
+
 	public void mouseClicked(MouseEvent arg0) {
-		// TODO Auto-generated method stub
-		
+
 	}
 
 	public void mousePressed(MouseEvent e) {
-		//Button pressed
-		//TODO assign button functions to the game
-		if(e.getY() > 420 && e.getY() < 480){
+		// Button pressed
+		// TODO assign button functions to the game
+		if (menu.getButtons().get(0).contains(e.getPoint())) {
 			MenuBar.buttonPressed = "button1";
 			pressed = "button1";
 			MainWindow.updateMenuBar();
-		}
-		else if(e.getY() > 510 && e.getY() < 570){
+		} else if (menu.getButtons().get(1).contains(e.getPoint())) {
 			MenuBar.buttonPressed = "button2";
 			pressed = "button2";
 			MainWindow.updateMenuBar();
 		}
-		
+
 	}
 
 	public void mouseReleased(MouseEvent e) {
-		// TODO Assign method calls when the mouse is released.
-		if(e.getY() > 420 && e.getY() < 480 && pressed.equals("button1")){
+		if (menu.getButtons().get(0).contains(e.getPoint())
+				&& pressed.equals("button1")) {
 			System.out.println("Button1 Pressed");
 			MainWindow.updateMenuBar();
-		}
-		else if(e.getY() > 510 && e.getY() < 570 && pressed.equals("button2")){
+
+		} else if (menu.getButtons().get(1).contains(e.getPoint())
+				&& pressed.equals("button2")) {
 			System.out.println("Button2 Pressed");
 			MainWindow.updateMenuBar();
 		}
 		pressed = "";
-		
 	}
 
 	public void mouseEntered(MouseEvent arg0) {
-		// TODO - Change the color of the button when the mouse enters
-		
+
 	}
 
 	public void mouseExited(MouseEvent arg0) {
-		// TODO Auto-generated method stub
-		
+
 	}
 
 }

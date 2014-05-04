@@ -2,9 +2,8 @@
 
 ###Java clone of ThinkFun's "Chocolate Fix" game for an AP Computer Science project
 
-######*Note: the game does not run at all, working on a stable build*
+######*Note: The basic UI and buttons are working, no game rules or engine working*
 
-================
 
 ##[How the game works](http://www.marblesthebrainstore.com/files/rules/Chocolate_Fix_Rules.pdf)
 
@@ -17,10 +16,10 @@ the color of the piece or the shape, or both).
 
 Using the clues one has to contextualize the clues into different positions and coordinate whether the color and shape of the piece will fit there.
 
-================
+
 
 ##Goals
- 
+
  * Graphics
   * Board (display)
   * Menu Bar (Level selection, etc.)
@@ -45,4 +44,3 @@ Using the clues one has to contextualize the clues into different positions and 
   * Save Game Progress
     * Look into XML
     * Look into .txt parsing
-
