@@ -37,7 +37,7 @@ public class MenuButton extends JPanel {
 
 		g.drawString(buttonText,
 				xPos + (rectWidth - (int) buttonTextBounds.getWidth()) / 2,
-				(yPos + rectHeight) - (int) buttonTextBounds.getHeight() / 4);
+				(yPos + rectHeight) - rectHeight/ 5);
 	}
 
 	public boolean contains(Point p) {

@@ -58,13 +58,20 @@ public class MenuBar extends JPanel {
 
 		// Button 1
 		buffGraphics.setColor(Color.decode("#4DB870").darker());
-		buttons.add(new MenuButton("Start", 50, 160, 200, 40));
+		buttons.add(new MenuButton("Test 1", 50, 60, 200, 40));
 		buttons.get(0).paint(buffGraphics);
 
 		// Button 2
 		buffGraphics.setColor(Color.decode("#4DB870").darker());
-		buttons.add(new MenuButton("Hello", 50, 230, 200, 40));
+		buttons.add(new MenuButton("Test 2", 50, 140, 200, 40));
 		buttons.get(1).paint(buffGraphics);
+		
+		// Button 3
+		buffGraphics.setColor(Color.decode("#4DB870").darker());
+		buttons.add(new MenuButton("Test 3", 50, 220, 200, 40));
+		buttons.get(2).paint(buffGraphics);
+		
+		// Buton 6
 		
 		
 		// MenuButton Conditionals
