@@ -32,4 +32,6 @@ public class LoadXmlLevelData {
 	public static void main(String args[]){
 		load();
 	}
+	
+	
 }

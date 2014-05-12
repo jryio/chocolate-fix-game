@@ -3,16 +3,15 @@ package display_components;
 import java.awt.Color;
 import java.awt.Graphics;
 
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlType;
 
-@XmlRootElement(name = "Levels")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "Piece", propOrder = {""})
 public class Piece {
 
-	// Pink - #FF99FF
-	// Brown - #CC9900
-	// Tan - #FFFFB8
-	// Grey - #B8B8B8
 
 	private Color color;
 	private String colorString;
@@ -26,20 +25,6 @@ public class Piece {
 		this.shape = s;
 	}
 
-	public void paint(Graphics g) {
-		// TODO create a Polygon object for Triangles
-		// TODO reuse code from Cirlce.java to paint the circle
-		// TODO implement switch statement for the shape and color types
-		// also
-		// TODO Determine where polygon is centered and find center of the
-		// triangle if needed
-
-		switch (shape) {
-		case "Square":
-			// Create a paint method that writes a square piece
-			break;
-		}
-	}
 
 	public void setPosition(int x, int y) {
 		this.x = x;
@@ -50,6 +35,7 @@ public class Piece {
 		scaleRatio = scale;
 	}
 	
+	@XmlAttribute(name = "x")
 	public int getRow(){
 		return row;
 	}
@@ -58,6 +44,7 @@ public class Piece {
 		this.row = Integer.parseInt(r);
 	}
 	
+	@XmlAttribute(name = "y")
 	public int getColumn(){
 		return this.column;
 	}
@@ -94,6 +81,21 @@ public class Piece {
 			this.colorString = null;
 		}
 		return this.colorString;
+	}
+	
+	public void paint(Graphics g) {
+		// TODO create a Polygon object for Triangles
+		// TODO reuse code from Cirlce.java to paint the circle
+		// TODO implement switch statement for the shape and color types
+		// also
+		// TODO Determine where polygon is centered and find center of the
+		// triangle if needed
+
+		switch (shape) {
+		case "Square":
+			// Create a paint method that writes a square piece
+			break;
+		}
 	}
 
 }

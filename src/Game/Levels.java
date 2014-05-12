@@ -1,27 +1,27 @@
 package game;
 
-import java.io.File;
 import java.util.ArrayList;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.Unmarshaller;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import javax.xml.bind.annotation.XmlType;
 
-import XMLParsing.LevelAdapter;
-
-@XmlRootElement(name = "Levels")
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "Levels", propOrder = "Level")
 public class Levels {
 
-	private static ArrayList<Level> LEVELS = new ArrayList<Level>();
+	private static ArrayList<Level> Level = new ArrayList<Level>();
 
-	@XmlJavaTypeAdapter(LevelAdapter.class)
+
 	public ArrayList<Level> getLevels() {
-		return LEVELS;
+		return Level;
 	}
-	
-	public void setLevels(ArrayList<Level> levels){
-		this.LEVELS = levels;
+
+	public void setLevels(ArrayList<Level> levels) {
+		this.Level = levels;
 	}
 
 }
