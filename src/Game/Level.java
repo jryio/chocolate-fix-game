@@ -1,44 +1,46 @@
 package game;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlElementWrapper;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.XmlRootElement;
 
-import display_components.Clue;
-import display_components.Piece;
+import XMLParsing.Clue;
+import XMLParsing.Piece;
 
+@XmlRootElement(name = "Level")
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Level", propOrder = { "Solution", "Clues", "id" })
 public class Level {
 
-	@XmlElementWrapper(name = "Solution")
-	@XmlElement(name = "Piece")
-	private ArrayList<Piece> Solution = new ArrayList<Piece>();
-	
+	@XmlElement(name = "Solution")
+	private Solution Solution;
+
 	private ArrayList<ArrayList<Piece>> Solution2D = new ArrayList<ArrayList<Piece>>();
+	
+	@XmlElement(name = "Clue")
 	private ArrayList<Clue> Clues = new ArrayList<Clue>();
+	
+	@XmlAttribute(name = "id")
 	private int id;
 
-	// public Level(List<List<Piece>> solution, ArrayList<Clue> clues) {
-	// this.Solution = solution;
-	// this.Clues = clues;
-	// }
+	//	public Level(List<List<Piece>> solution, ArrayList<Clue> clues) {
+	//		this.Solution = solution;
+	//		this.Clues = clues;
+	//	}
 
-	public ArrayList<Piece> getSolution() {
-		return Solution;
+	public Solution getSolution() {
+		return this.Solution;
 	}
 
-	public void setSolution(ArrayList<Piece> solution) {
+	public void setSolution(Solution solution) {
 		this.Solution = solution;
 	}
 
 	public ArrayList<Clue> getClues() {
-		return Clues;
+		return this.Clues;
 	}
 
 	public void setClues(ArrayList<Clue> clues) {
@@ -46,7 +48,7 @@ public class Level {
 	}
 
 	public int getId() {
-		return id;
+		return this.id;
 	}
 
 	public void setId(String idString) {

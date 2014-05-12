@@ -1,25 +1,27 @@
-package display_components;
+package XMLParsing;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
 
 @XmlRootElement(name = "Levels")
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Clue", propOrder = {"Piece"})
 public class Clue {
 
+	@XmlElement(name = "Piece")
 	private ArrayList<Piece> Piece = new ArrayList<Piece>();
 	private ArrayList<ArrayList<Piece>> Clue2D = new ArrayList<ArrayList<Piece>>();
+	
+	@XmlAttribute(name = "id")
 	private int id;
 
 
 	public ArrayList<Piece> getPiece() {
-		return Piece ;
+		return this.Piece ;
 	}
 
 	public void setPiece(ArrayList<Piece> Pieces) {
@@ -42,7 +44,7 @@ public class Clue {
 	}
 
 	public int getId() {
-		return id;
+		return this.id;
 	}
 
 	public void setId(String idInput) {

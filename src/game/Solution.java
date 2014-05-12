@@ -1,23 +1,24 @@
 package game;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 
-import display_components.Piece;
+import XMLParsing.Piece;
 
+@XmlRootElement(name = "Level")
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Solution", propOrder = { "Piece" })
 public class Solution {
 
 	private ArrayList<Piece> Piece = new ArrayList<Piece>();
 	private ArrayList<ArrayList<Piece>> Solution2D = new ArrayList<ArrayList<Piece>>();
 
+	@XmlElement(name = "Piece")
 	public ArrayList<Piece> getPiece() {
-		return Piece;
+		return this.Piece;
 	}
 
 	public void setPiece(ArrayList<Piece> sol) {
