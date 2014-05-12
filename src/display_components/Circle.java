@@ -1,4 +1,4 @@
-package View;
+package display_components;
 
 import java.awt.Graphics;
 import java.awt.Point;

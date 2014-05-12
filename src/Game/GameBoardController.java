@@ -1,11 +1,11 @@
-package Game;
+package game;
 
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
-import View.GameBoard;
-import View.MainWindow;
+import display.GameBoard;
+import display.MainWindow;
 
 public class GameBoardController implements MouseMotionListener, MouseListener {
 	private MouseListener mouse;

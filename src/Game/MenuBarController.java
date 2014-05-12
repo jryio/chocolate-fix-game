@@ -1,11 +1,11 @@
-package Game;
+package game;
 
 import java.awt.Component;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-import View.MainWindow;
-import View.MenuBar;
+import display.MainWindow;
+import display.MenuBar;
 
 public class MenuBarController extends Component implements MouseListener {
 
@@ -20,7 +20,7 @@ public class MenuBarController extends Component implements MouseListener {
 
 	public void mousePressed(MouseEvent e) {
 		// Button pressed
-		// TODO assign button functions to the game
+		// TODO Assign button functions to the game
 		if (menu.getButtons().get(0).contains(e.getPoint())) {
 			MenuBar.buttonPressed = "button1";
 			pressed = "button1";

@@ -1,4 +1,4 @@
-package View;
+package display;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -8,6 +8,8 @@ import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
 import javax.swing.JPanel;
+
+import display_components.Circle;
 
 public class GameBoard extends JPanel{
 	

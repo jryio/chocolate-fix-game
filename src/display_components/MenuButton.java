@@ -1,4 +1,4 @@
-package View;
+package display_components;
 
 import java.awt.Color;
 import java.awt.FontMetrics;
@@ -7,6 +7,8 @@ import java.awt.Point;
 import java.awt.geom.Rectangle2D;
 
 import javax.swing.JPanel;
+
+import display.MenuBar;
 
 public class MenuButton extends JPanel {
 

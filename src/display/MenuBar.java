@@ -1,4 +1,4 @@
-package View;
+package display;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -10,6 +10,8 @@ import java.io.File;
 import java.util.ArrayList;
 
 import javax.swing.JPanel;
+
+import display_components.MenuButton;
 
 public class MenuBar extends JPanel {
 
@@ -37,7 +39,7 @@ public class MenuBar extends JPanel {
 	}
 
 	public void paint(Graphics g) {
-		BufferedImage buffImage = new BufferedImage(300, 300,
+		BufferedImage buffImage = new BufferedImage(300, 200,
 				BufferedImage.TYPE_INT_RGB);
 		Graphics2D buffGraphics = buffImage.createGraphics();
 
@@ -54,24 +56,22 @@ public class MenuBar extends JPanel {
 
 		// Menu background - green
 		buffGraphics.setColor(Color.decode("#4DB870"));
-		buffGraphics.fillRect(0, 1, 299, 298);
+		buffGraphics.fillRect(0, 1, 299, 198);
 
 		// Button 1
 		buffGraphics.setColor(Color.decode("#4DB870").darker());
-		buttons.add(new MenuButton("Test 1", 50, 60, 200, 40));
+		buttons.add(new MenuButton("Test 1", 50, 25, 200, 40));
 		buttons.get(0).paint(buffGraphics);
 
 		// Button 2
 		buffGraphics.setColor(Color.decode("#4DB870").darker());
-		buttons.add(new MenuButton("Test 2", 50, 140, 200, 40));
+		buttons.add(new MenuButton("Test 2", 50, 80, 200, 40));
 		buttons.get(1).paint(buffGraphics);
 		
 		// Button 3
 		buffGraphics.setColor(Color.decode("#4DB870").darker());
-		buttons.add(new MenuButton("Test 3", 50, 220, 200, 40));
+		buttons.add(new MenuButton("Test 3", 50, 140, 200, 40));
 		buttons.get(2).paint(buffGraphics);
-		
-		// Buton 6
 		
 		
 		// MenuButton Conditionals

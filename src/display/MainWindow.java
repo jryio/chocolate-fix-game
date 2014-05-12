@@ -1,11 +1,11 @@
-package View;
+package display;
+
+import game.GameBoardController;
+import game.MenuBarController;
 
 import java.awt.BorderLayout;
 
 import javax.swing.JFrame;
-
-import Game.GameBoardController;
-import Game.MenuBarController;
 
 public class MainWindow extends JFrame {
 
@@ -33,13 +33,13 @@ public class MainWindow extends JFrame {
 
 		// Size settings for the MainWindow (board) and the menuBar
 		board.setSize(600, 600);
-		menuBar.setSize(300, 300);
+		menuBar.setSize(300, 200);
 
 		frame.add(board);
 		frame.add(menuBar);
 		frame.setLayout(new BorderLayout());
 		board.setLocation(0, 0);
-		menuBar.setLocation(600, 300);
+		menuBar.setLocation(600, 400);
 		menuBar.load();
 
 		frame.setVisible(true);
