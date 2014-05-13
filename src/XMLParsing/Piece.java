@@ -7,33 +7,27 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(name = "Levels")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Piece {
 
 	@XmlElement(name = "Color")
-	private Color Color;
-	
-	private String ColorString;
-	
+	private String colorString;
+
 	@XmlElement(name = "Shape")
 	private String Shape;
-	
+
 	@XmlAttribute(name = "x")
 	private int row;
-	
+
 	@XmlAttribute(name = "y")
 	private int column;
-	
-	private double scaleRatio = 1;
-	private int x = 0, y = 0, width = 0, height = 0;
 
-	// public Piece(Color c, String s) {
-	// this.Color = c;
-	// this.Shape = s;
-	// }
+	private Color color = new Color(0, 0, 0, 0);
+
+	private double scaleRatio = 1;
+
+	private int x = 0, y = 0, width = 0, height = 0;
 
 	public void setPosition(int x, int y) {
 		this.x = x;
@@ -60,12 +54,33 @@ public class Piece {
 		this.column = Integer.parseInt(c);
 	}
 
-	public Color getColor() {
-		return this.Color;
+	public String getColor() {
+		return this.colorString;
 	}
 
-	public void setColor(Color c) {
-		this.Color = c;
+	public void setColor(String c) {
+
+		this.colorString = c;
+		
+		if (c.equals("B")) {
+			this.color = Color.decode("#411711");
+
+		} else if (c.equals("T")) {
+
+			this.color = Color.decode("#cac596");
+
+		} else if (c.equals("P")) {
+
+			this.color = color.decode("#b42e66");
+		} else {
+			this.color = new Color(0, 0, 0, 0);
+		}
+
+	}
+
+	public Color getJavaColor() {
+
+		return color;
 	}
 
 	public String getShape() {
@@ -76,23 +91,10 @@ public class Piece {
 		this.Shape = s;
 	}
 
-	public String getColorString() {
-		if (Color.equals(Color.decode("#411711"))) {
-			this.ColorString = "B";
-		} else if (Color.equals(Color.decode("#cac596"))) {
-			this.ColorString = "T";
-		} else if (Color.equals(Color.decode("#b42e66"))) {
-			this.ColorString = "P";
-		} else {
-			this.ColorString = null;
-		}
-		return this.ColorString;
-	}
-
 	public void paint(Graphics g) {
 		// TODO create a Polygon object for Triangles
 		// TODO reuse code from Cirlce.java to paint the circle
-		// TODO implement switch statement for the Shape and Color types
+		// TODO implement switch statement for the Shape and color types
 		// also
 		// TODO Determine where polygon is centered and find center of the
 		// triangle if needed
@@ -102,6 +104,12 @@ public class Piece {
 			// Create a paint method that writes a square piece
 			break;
 		}
+	}
+
+	@Override
+	public String toString() {
+		return "Piece [color=" + color + ", Shape=" + Shape + ", row="
+				+ row + ", column=" + column;
 	}
 
 }

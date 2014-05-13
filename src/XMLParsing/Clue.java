@@ -8,17 +8,16 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(name = "Levels")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Clue {
 
 	@XmlElement(name = "Piece")
 	private ArrayList<Piece> Piece = new ArrayList<Piece>();
-	private ArrayList<ArrayList<Piece>> Clue2D = new ArrayList<ArrayList<Piece>>();
 	
 	@XmlAttribute(name = "id")
 	private int id;
 
+	private ArrayList<ArrayList<Piece>> Clue2D = new ArrayList<ArrayList<Piece>>();
 
 	public ArrayList<Piece> getPiece() {
 		return this.Piece ;

@@ -1,8 +1,5 @@
 package XMLParsing;
 
-import game.Level;
-import game.Levels;
-
 import java.io.File;
 
 import javax.xml.bind.JAXBContext;
@@ -19,9 +16,9 @@ public class LoadXmlLevelData {
 			
 			Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 			
-			Levels levels = (Levels) jaxbUnmarshaller.unmarshal(new File("res/Levels.xml"));
+			Levels levels = (Levels) jaxbUnmarshaller.unmarshal(file);
 			
-			System.out.println(levels.getLevels().get(0).toString());
+			System.out.println(levels.getLevels().get(0).getSolution().getPiece().toString());
 			
 		} catch(Exception e){
 			e.printStackTrace();
@@ -31,6 +28,7 @@ public class LoadXmlLevelData {
 	
 	public static void main(String args[]){
 		load();
+		
 	}
 	
 	

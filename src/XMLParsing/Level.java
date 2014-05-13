@@ -1,4 +1,4 @@
-package game;
+package XMLParsing;
 
 import java.util.ArrayList;
 
@@ -8,28 +8,24 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import XMLParsing.Clue;
-import XMLParsing.Piece;
-
-@XmlRootElement(name = "Level")
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Level {
 
 	@XmlElement(name = "Solution")
 	private Solution Solution;
 
-	private ArrayList<ArrayList<Piece>> Solution2D = new ArrayList<ArrayList<Piece>>();
-	
 	@XmlElement(name = "Clue")
 	private ArrayList<Clue> Clues = new ArrayList<Clue>();
-	
+
 	@XmlAttribute(name = "id")
 	private int id;
 
-	//	public Level(List<List<Piece>> solution, ArrayList<Clue> clues) {
-	//		this.Solution = solution;
-	//		this.Clues = clues;
-	//	}
+	private ArrayList<ArrayList<Piece>> Solution2D = new ArrayList<ArrayList<Piece>>();
+
+	// public Level(List<List<Piece>> solution, ArrayList<Clue> clues) {
+	// this.Solution = solution;
+	// this.Clues = clues;
+	// }
 
 	public Solution getSolution() {
 		return this.Solution;
