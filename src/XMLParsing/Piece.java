@@ -2,16 +2,20 @@ package XMLParsing;
 
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Point;
+import java.awt.geom.Point2D;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
+import javax.swing.JComponent;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlType;
 
-@XmlAccessorType(XmlAccessType.FIELD)
+import display_components.Triangle;
+
+@XmlType(factoryMethod = "newInstance")
 public class Piece {
 
-	@XmlElement(name = "Color")
 	private String colorString;
 
 	@XmlElement(name = "Shape")
@@ -23,19 +27,91 @@ public class Piece {
 	@XmlAttribute(name = "y")
 	private int column;
 
+	// Draw Point of the enclosing rectangle for Graphics2D objects
+	private Point location;
+	private final Point INITIALPOINT;
+
+	// Sets the size of the shape
+	private Integer size;
+
+	// Center of the shape
+	private Point2D.Double center;
+
+	// Triangle Object
+	Triangle tri;
+
 	private Color color = new Color(0, 0, 0, 0);
+	private Color pink = Color.decode("#B42E66");
+	private Color brown = Color.decode("#411711");
+	private Color tan = Color.decode("#d9ca7d");
+	private Color backgroundPiece = Color.LIGHT_GRAY;
 
-	private double scaleRatio = 1;
+	private boolean isContained = false;
 
-	private int x = 0, y = 0, width = 0, height = 0;
+	public Piece(String c, String s, Point loc, int size) {
 
-	public void setPosition(int x, int y) {
-		this.x = x;
-		this.y = y;
+		// Set Values for Color
+		this.colorString = c;
+
+		if (this.colorString.equalsIgnoreCase("B")) {
+
+			this.color = brown;
+
+		} else if (this.colorString.equalsIgnoreCase("T")) {
+
+			this.color = tan;
+
+		} else if (this.colorString.equalsIgnoreCase("P")) {
+
+			this.color = pink;
+		}
+
+		// Set Values for Shape
+		this.Shape = s;
+
+		// Set Location
+		this.location = loc;
+		this.INITIALPOINT = loc;
+
+		// Set Size
+		this.size = size;
 	}
 
-	public void scale(double scale) {
-		scaleRatio = scale;
+	// Private instance for JAXB
+	private Piece() {
+		this.colorString = null;
+		this.color = null;
+		this.Shape = null;
+		this.size = null;
+		this.location = null;
+		this.INITIALPOINT = null;
+	}
+
+	/* Creates a new instance of Piece which should only be used by JAXB */
+	public static Piece newInstance() {
+		return new Piece();
+	}
+
+	public void setLocation(Point p) {
+		this.location = p;
+	}
+
+	public Point getLocation() {
+		return this.location;
+	}
+	
+	public void resetLocation(){
+		this.location = this.INITIALPOINT;
+	}
+	
+	
+
+	public void setSize(int s) {
+		this.size = s;
+	}
+
+	public int getSizePiece() {
+		return this.size;
 	}
 
 	public int getRow() {
@@ -58,24 +134,22 @@ public class Piece {
 		return this.colorString;
 	}
 
+	@XmlElement(name = "Color")
 	public void setColor(String c) {
 
 		this.colorString = c;
-		
-		if (c.equals("B")) {
-			this.color = Color.decode("#411711");
 
-		} else if (c.equals("T")) {
+		if (this.colorString.equalsIgnoreCase("B")) {
+			this.color = brown;
 
-			this.color = Color.decode("#cac596");
+		} else if (this.colorString.equalsIgnoreCase("T")) {
 
-		} else if (c.equals("P")) {
+			this.color = tan;
 
-			this.color = color.decode("#b42e66");
-		} else {
-			this.color = new Color(0, 0, 0, 0);
+		} else if (this.colorString.equalsIgnoreCase("P")) {
+
+			this.color = pink;
 		}
-
 	}
 
 	public Color getJavaColor() {
@@ -91,25 +165,98 @@ public class Piece {
 		this.Shape = s;
 	}
 
-	public void paint(Graphics g) {
-		// TODO create a Polygon object for Triangles
-		// TODO reuse code from Cirlce.java to paint the circle
-		// TODO implement switch statement for the Shape and color types
-		// also
-		// TODO Determine where polygon is centered and find center of the
-		// triangle if needed
+	public void draw(Graphics g) {
 
-		switch (Shape) {
-		case "Square":
-			// Create a paint method that writes a square piece
-			break;
+		// Create Graphics2D object for use with Path2D.Double in Triangle.java
+		Graphics2D graphics = (Graphics2D) g.create();
+
+		// If the Piece is a Circle
+		if (this.Shape.equals("C")) {
+
+			// Encapsulating Cirlce
+			graphics.setColor(backgroundPiece);
+			graphics.fillOval(this.location.x, this.location.y, size, size);
+
+			// Inner Circle Piece
+			graphics.setColor(this.color);
+			graphics.fillOval((this.location.x + 3), (this.location.y + 3),
+					(size - 6), (size - 6));
+
+			// Calculate the center of the Circle
+			this.center = new Point2D.Double(this.location.x
+					+ (this.size / 2.0), this.location.y + (this.size / 2.0));
+
+			// If the Piece is a Square
+		} else if (this.Shape.equals("S")) {
+
+			// Encapsulating Square
+			graphics.setColor(backgroundPiece);
+			graphics.fillRect(this.location.x, this.location.y, size, size);
+
+			// Inner Sqaure Piece
+			graphics.setColor(this.color);
+			graphics.fillRect(this.location.x + 3, this.location.y + 3,
+					size - 6, size - 6);
+
+			// Calculate the center of the Circle
+			this.center = new Point2D.Double(this.location.x
+					+ (this.size / 2.0), this.location.y + (this.size / 2.0));
+
+		} else if (this.Shape.equals("T")) {
+			// Set the Color to the background color
+			graphics.setColor(backgroundPiece);
+
+			// Create Triangle and draw
+			tri = new Triangle(this.location, this.size);
+			tri.constructPath();
+			graphics.fill(tri);
+
+			// Set color to piece color
+			graphics.setColor(this.color);
+
+			// Create inscribed Triangle
+			graphics.fill(tri.constructInscribedTriangle(6));
+
+			this.center = new Point2D.Double(this.location.x
+					+ tri.getSideLength() / 2.0, this.location.y
+					+ tri.getCircumcenterRadius());
 		}
+	}
+
+	//Depending on the shape type, returns if the point in contained within the shape.
+	public boolean contains(Point p) {
+
+		if (this.Shape.equalsIgnoreCase("C")) {
+
+			if ((Math.pow((this.location.x - this.center.x), 2) + Math.pow(
+					(this.location.y - this.center.y), 2)) < (Math.pow(
+					this.size, 2))) {
+				isContained = true;
+			}
+
+		} else if (this.Shape.equalsIgnoreCase("S")) {
+			
+			if (((p.x >= this.location.x) && (p.x <= (this.location.x + this.size)))
+					&& ((p.y >= this.location.y) && (p.y <= this.location.y
+							+ this.size))) {
+				isContained = true;
+			}
+
+		} else if (this.Shape.equalsIgnoreCase("T")) {
+			if (tri.contains(p)) {
+				isContained = true;
+			}
+
+		}
+		return isContained;
 	}
 
 	@Override
 	public String toString() {
-		return "Piece [color=" + color + ", Shape=" + Shape + ", row="
-				+ row + ", column=" + column;
+		return "Piece [colorString=" + colorString + ", Shape=" + Shape
+				+ ", row=" + row + ", column=" + column + ", location="
+				+ location + ", size=" + size + ", color=" + color + ", pink="
+				+ pink + ", brown=" + brown + ", tan=" + tan
+				+ ", backgroundPiece=" + backgroundPiece + "]";
 	}
-
 }

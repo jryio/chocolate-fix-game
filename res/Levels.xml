@@ -197,46 +197,46 @@
 	<Level Difficulty="Beginner" id="1">
 		<Solution>
 			<Piece x="0" y="0">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>P</Color>
+				<Shape>C</Shape>
 			</Piece>
 			<Piece x="0" y="1">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>B</Color>
+				<Shape>C</Shape>
 			</Piece>
 			<Piece x="0" y="2">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>B</Color>
+				<Shape>S</Shape>
 			</Piece>
 			<Piece x="1" y="0">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>T</Color>
+				<Shape>C</Shape>
 			</Piece>
 			<Piece x="1" y="1">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>T</Color>
+				<Shape>T</Shape>
 			</Piece>
 			<Piece x="1" y="2">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>B</Color>
+				<Shape>T</Shape>
 			</Piece>
 			<Piece x="2" y="0">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>P</Color>
+				<Shape>T</Shape>
 			</Piece>
 			<Piece x="2" y="1">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>P</Color>
+				<Shape>S</Shape>
 			</Piece>
 			<Piece x="2" y="2">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>T</Color>
+				<Shape>S</Shape>
 			</Piece>
 		</Solution>
 		<Clues>
 			<Clue id="0">
 				<Piece c="0" r="0">
-					<Color></Color>
+					<Color>ß</Color>
 					<Shape></Shape>
 				</Piece>
 				<Piece c="1" r="0">
@@ -390,41 +390,41 @@
 	</Level>
 	<Level Difficulty="Beginner" id="2">
 		<Solution>
-			<Piece x="0" y="0">
-				<Color></Color>
-				<Shape></Shape>
+			<Piece c="0" r="0">
+				<Color>P</Color>
+				<Shape>T</Shape>
 			</Piece>
-			<Piece x="0" y="1">
-				<Color></Color>
-				<Shape></Shape>
+			<Piece c="1" r="0">
+				<Color>B</Color>
+				<Shape>S</Shape>
 			</Piece>
-			<Piece x="0" y="2">
-				<Color></Color>
-				<Shape></Shape>
+			<Piece c="2" r="0">
+				<Color>B</Color>
+				<Shape>C</Shape>
 			</Piece>
-			<Piece x="1" y="0">
-				<Color></Color>
-				<Shape></Shape>
+			<Piece c="0" r="1">
+				<Color>B</Color>
+				<Shape>T</Shape>
 			</Piece>
-			<Piece x="1" y="1">
-				<Color></Color>
-				<Shape></Shape>
+			<Piece c="1" r="1">
+				<Color>P</Color>
+				<Shape>C</Shape>
 			</Piece>
-			<Piece x="1" y="2">
-				<Color></Color>
-				<Shape></Shape>
+			<Piece c="2" r="1">
+				<Color>T</Color>
+				<Shape>S</Shape>
 			</Piece>
-			<Piece x="2" y="0">
-				<Color></Color>
-				<Shape></Shape>
+			<Piece c="0" r="2">
+				<Color>T</Color>
+				<Shape>C</Shape>
 			</Piece>
-			<Piece x="2" y="1">
-				<Color></Color>
-				<Shape></Shape>
+			<Piece c="1" r="2">
+				<Color>P</Color>
+				<Shape>S</Shape>
 			</Piece>
-			<Piece x="2" y="2">
-				<Color></Color>
-				<Shape></Shape>
+			<Piece c="2" r="2">
+				<Color>T</Color>
+				<Shape>S</Shape>
 			</Piece>
 		</Solution>
 		<Clues>
@@ -585,40 +585,40 @@
 	<Level Difficulty="Beginner" id="3">
 		<Solution>
 			<Piece x="0" y="0">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>P</Color>
+				<Shape>S</Shape>
 			</Piece>
 			<Piece x="0" y="1">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>T</Color>
+				<Shape>C</Shape>
 			</Piece>
 			<Piece x="0" y="2">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>P</Color>
+				<Shape>T</Shape>
 			</Piece>
 			<Piece x="1" y="0">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>B</Color>
+				<Shape>T</Shape>
 			</Piece>
 			<Piece x="1" y="1">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>B</Color>
+				<Shape>S</Shape>
 			</Piece>
 			<Piece x="1" y="2">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>T</Color>
+				<Shape>T</Shape>
 			</Piece>
 			<Piece x="2" y="0">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>P</Color>
+				<Shape>C</Shape>
 			</Piece>
 			<Piece x="2" y="1">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>T</Color>
+				<Shape>S</Shape>
 			</Piece>
 			<Piece x="2" y="2">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>B</Color>
+				<Shape>C</Shape>
 			</Piece>
 		</Solution>
 		<Clues>
@@ -779,40 +779,40 @@
 	<Level Difficulty="Beginner" id="4">
 		<Solution>
 			<Piece x="0" y="0">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>P</Color>
+				<Shape>T</Shape>
 			</Piece>
 			<Piece x="0" y="1">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>T</Color>
+				<Shape>T</Shape>
 			</Piece>
 			<Piece x="0" y="2">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>B</Color>
+				<Shape>S</Shape>
 			</Piece>
 			<Piece x="1" y="0">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>P</Color>
+				<Shape>C</Shape>
 			</Piece>
 			<Piece x="1" y="1">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>P</Color>
+				<Shape>S</Shape>
 			</Piece>
 			<Piece x="1" y="2">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>T</Color>
+				<Shape>C</Shape>
 			</Piece>
 			<Piece x="2" y="0">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>B</Color>
+				<Shape>C</Shape>
 			</Piece>
 			<Piece x="2" y="1">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>B</Color>
+				<Shape>T</Shape>
 			</Piece>
 			<Piece x="2" y="2">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>T</Color>
+				<Shape>S</Shape>
 			</Piece>
 		</Solution>
 		<Clues>
@@ -973,40 +973,40 @@
 	<Level Difficulty="Beginner" id="5">
 		<Solution>
 			<Piece x="0" y="0">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>T</Color>
+				<Shape>T</Shape>
 			</Piece>
 			<Piece x="0" y="1">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>T</Color>
+				<Shape>S</Shape>
 			</Piece>
 			<Piece x="0" y="2">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>P</Color>
+				<Shape>C</Shape>
 			</Piece>
 			<Piece x="1" y="0">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>P</Color>
+				<Shape>S</Shape>
 			</Piece>
 			<Piece x="1" y="1">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>T</Color>
+				<Shape>C</Shape>
 			</Piece>
 			<Piece x="1" y="2">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>B</Color>
+				<Shape>T</Shape>
 			</Piece>
 			<Piece x="2" y="0">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>B</Color>
+				<Shape>C</Shape>
 			</Piece>
 			<Piece x="2" y="1">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>B</Color>
+				<Shape>S</Shape>
 			</Piece>
 			<Piece x="2" y="2">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>P</Color>
+				<Shape>T</Shape>
 			</Piece>
 		</Solution>
 		<Clues>
@@ -1167,40 +1167,40 @@
 	<Level Difficulty="Beginner" id="6">
 		<Solution>
 			<Piece x="0" y="0">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>T</Color>
+				<Shape>C</Shape>
 			</Piece>
 			<Piece x="0" y="1">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>P</Color>
+				<Shape>S</Shape>
 			</Piece>
 			<Piece x="0" y="2">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>B</Color>
+				<Shape>C</Shape>
 			</Piece>
 			<Piece x="1" y="0">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>P</Color>
+				<Shape>C</Shape>
 			</Piece>
 			<Piece x="1" y="1">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>T</Color>
+				<Shape>S</Shape>
 			</Piece>
 			<Piece x="1" y="2">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>B</Color>
+				<Shape>T</Shape>
 			</Piece>
 			<Piece x="2" y="0">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>P</Color>
+				<Shape>T</Shape>
 			</Piece>
 			<Piece x="2" y="1">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>B</Color>
+				<Shape>S</Shape>
 			</Piece>
 			<Piece x="2" y="2">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>T</Color>
+				<Shape>T</Shape>
 			</Piece>
 		</Solution>
 		<Clues>
@@ -1361,40 +1361,40 @@
 	<Level Difficulty="Beginner" id="7">
 		<Solution>
 			<Piece x="0" y="0">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>T</Color>
+				<Shape>S</Shape>
 			</Piece>
 			<Piece x="0" y="1">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>T</Color>
+				<Shape>C</Shape>
 			</Piece>
 			<Piece x="0" y="2">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>B</Color>
+				<Shape>S</Shape>
 			</Piece>
 			<Piece x="1" y="0">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>P</Color>
+				<Shape>T</Shape>
 			</Piece>
 			<Piece x="1" y="1">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>T</Color>
+				<Shape>S</Shape>
 			</Piece>
 			<Piece x="1" y="2">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>P</Color>
+				<Shape>S</Shape>
 			</Piece>
 			<Piece x="2" y="0">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>B</Color>
+				<Shape>C</Shape>
 			</Piece>
 			<Piece x="2" y="1">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>P</Color>
+				<Shape>C</Shape>
 			</Piece>
 			<Piece x="2" y="2">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>B</Color>
+				<Shape>T</Shape>
 			</Piece>
 		</Solution>
 		<Clues>
@@ -1555,40 +1555,40 @@
 	<Level Difficulty="Beginner" id="8">
 		<Solution>
 			<Piece x="0" y="0">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>T</Color>
+				<Shape>C</Shape>
 			</Piece>
 			<Piece x="0" y="1">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>B</Color>
+				<Shape>C</Shape>
 			</Piece>
 			<Piece x="0" y="2">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>T</Color>
+				<Shape>T</Shape>
 			</Piece>
 			<Piece x="1" y="0">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>B</Color>
+				<Shape>S</Shape>
 			</Piece>
 			<Piece x="1" y="1">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>P</Color>
+				<Shape>S</Shape>
 			</Piece>
 			<Piece x="1" y="2">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>T</Color>
+				<Shape>S</Shape>
 			</Piece>
 			<Piece x="2" y="0">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>P</Color>
+				<Shape>T</Shape>
 			</Piece>
 			<Piece x="2" y="1">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>B</Color>
+				<Shape>T</Shape>
 			</Piece>
 			<Piece x="2" y="2">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>P</Color>
+				<Shape>C</Shape>
 			</Piece>
 		</Solution>
 		<Clues>
@@ -1749,40 +1749,40 @@
 	<Level Difficulty="Beginner" id="9">
 		<Solution>
 			<Piece x="0" y="0">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>B</Color>
+				<Shape>C</Shape>
 			</Piece>
 			<Piece x="0" y="1">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>P</Color>
+				<Shape>S</Shape>
 			</Piece>
 			<Piece x="0" y="2">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>P</Color>
+				<Shape>T</Shape>
 			</Piece>
 			<Piece x="1" y="0">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>T</Color>
+				<Shape>C</Shape>
 			</Piece>
 			<Piece x="1" y="1">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>P</Color>
+				<Shape>C</Shape>
 			</Piece>
 			<Piece x="1" y="2">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>B</Color>
+				<Shape>T</Shape>
 			</Piece>
 			<Piece x="2" y="0">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>T</Color>
+				<Shape>T</Shape>
 			</Piece>
 			<Piece x="2" y="1">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>B</Color>
+				<Shape>S</Shape>
 			</Piece>
 			<Piece x="2" y="2">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>T</Color>
+				<Shape>S</Shape>
 			</Piece>
 		</Solution>
 		<Clues>
@@ -1943,40 +1943,40 @@
 	<Level Difficulty="Beginner" id="10">
 		<Solution>
 			<Piece x="0" y="0">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>P</Color>
+				<Shape>S</Shape>
 			</Piece>
 			<Piece x="0" y="1">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>T</Color>
+				<Shape>T</Shape>
 			</Piece>
 			<Piece x="0" y="2">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>P</Color>
+				<Shape>T</Shape>
 			</Piece>
 			<Piece x="1" y="0">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>B</Color>
+				<Shape>S</Shape>
 			</Piece>
 			<Piece x="1" y="1">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>B</Color>
+				<Shape>C</Shape>
 			</Piece>
 			<Piece x="1" y="2">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>T</Color>
+				<Shape>C</Shape>
 			</Piece>
 			<Piece x="2" y="0">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>B</Color>
+				<Shape>T</Shape>
 			</Piece>
 			<Piece x="2" y="1">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>P</Color>
+				<Shape>C</Shape>
 			</Piece>
 			<Piece x="2" y="2">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>T</Color>
+				<Shape>S</Shape>
 			</Piece>
 		</Solution>
 		<Clues>
@@ -2137,40 +2137,40 @@
 	<Level Difficulty="Beginner" id="11">
 		<Solution>
 			<Piece x="0" y="0">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>P</Color>
+				<Shape>S</Shape>
 			</Piece>
 			<Piece x="0" y="1">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>B</Color>
+				<Shape>T</Shape>
 			</Piece>
 			<Piece x="0" y="2">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>P</Color>
+				<Shape>T</Shape>
 			</Piece>
 			<Piece x="1" y="0">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>B</Color>
+				<Shape>C</Shape>
 			</Piece>
 			<Piece x="1" y="1">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>P</Color>
+				<Shape>C</Shape>
 			</Piece>
 			<Piece x="1" y="2">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>T</Color>
+				<Shape>T</Shape>
 			</Piece>
 			<Piece x="2" y="0">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>B</Color>
+				<Shape>S</Shape>
 			</Piece>
 			<Piece x="2" y="1">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>T</Color>
+				<Shape>S</Shape>
 			</Piece>
 			<Piece x="2" y="2">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>T</Color>
+				<Shape>C</Shape>
 			</Piece>
 		</Solution>
 		<Clues>
@@ -2331,40 +2331,40 @@
 	<Level Difficulty="Beginner" id="12">
 		<Solution>
 			<Piece x="0" y="0">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>T</Color>
+				<Shape>T</Shape>
 			</Piece>
 			<Piece x="0" y="1">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>P</Color>
+				<Shape>C</Shape>
 			</Piece>
 			<Piece x="0" y="2">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>P</Color>
+				<Shape>T</Shape>
 			</Piece>
 			<Piece x="1" y="0">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>T</Color>
+				<Shape>S</Shape>
 			</Piece>
 			<Piece x="1" y="1">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>T</Color>
+				<Shape>C</Shape>
 			</Piece>
 			<Piece x="1" y="2">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>B</Color>
+				<Shape>C</Shape>
 			</Piece>
 			<Piece x="2" y="0">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>B</Color>
+				<Shape>T</Shape>
 			</Piece>
 			<Piece x="2" y="1">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>B</Color>
+				<Shape>S</Shape>
 			</Piece>
 			<Piece x="2" y="2">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>P</Color>
+				<Shape>S</Shape>
 			</Piece>
 		</Solution>
 		<Clues>
@@ -2525,28 +2525,28 @@
 	<Level Difficulty="Beginner" id="13">
 		<Solution>
 			<Piece x="0" y="0">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>T</Color>
+				<Shape>S</Shape>
 			</Piece>
 			<Piece x="0" y="1">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>P</Color>
+				<Shape>T</Shape>
 			</Piece>
 			<Piece x="0" y="2">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>T</Color>
+				<Shape>T</Shape>
 			</Piece>
 			<Piece x="1" y="0">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>T</Color>
+				<Shape>C</Shape>
 			</Piece>
 			<Piece x="1" y="1">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>B</Color>
+				<Shape>S</Shape>
 			</Piece>
 			<Piece x="1" y="2">
-				<Color></Color>
-				<Shape></Shape>
+				<Color>B</Color>
+				<Shape>C</Shape>
 			</Piece>
 			<Piece x="2" y="0">
 				<Color></Color>

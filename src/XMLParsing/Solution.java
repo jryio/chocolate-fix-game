@@ -7,7 +7,6 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlAccessorType(XmlAccessType.FIELD)
 public class Solution {
 
 	private ArrayList<Piece> Piece = new ArrayList<Piece>();
@@ -22,19 +21,17 @@ public class Solution {
 		this.Piece = sol;
 	}
 
-	// public ArrayList<ArrayList<Piece>> getSolution() {
-	// for (Piece p : Piece) {
-	// if (p.getRow() == 0) {
-	// Solution2D.get(0).add(p);
-	// }
-	// else if(p.getRow() == 1){
-	// Solution2D.get(1).add(p);
-	// }
-	// else if(p.getRow() == 2){
-	// Solution2D.get(2).add(p);
-	// }
-	// }
-	// return Solution2D;
-	// }
+	public ArrayList<ArrayList<Piece>> getSolution() {
+		for (Piece p : Piece) {
+			if (p.getRow() == 0) {
+				Solution2D.get(0).add(p);
+			} else if (p.getRow() == 1) {
+				Solution2D.get(1).add(p);
+			} else if (p.getRow() == 2) {
+				Solution2D.get(2).add(p);
+			}
+		}
+		return Solution2D;
+	}
 
 }

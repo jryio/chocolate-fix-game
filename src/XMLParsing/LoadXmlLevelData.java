@@ -7,29 +7,27 @@ import javax.xml.bind.Unmarshaller;
 
 public class LoadXmlLevelData {
 
+	private static Levels levels;
+
 	public static void load() {
-		try{
-			
+		try {
+
 			File file = new File("res/Levels.xml");
-			
+
 			JAXBContext jaxbContext = JAXBContext.newInstance(Levels.class);
-			
+
 			Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-			
-			Levels levels = (Levels) jaxbUnmarshaller.unmarshal(file);
-			
-			System.out.println(levels.getLevels().get(0).getSolution().getPiece().toString());
-			
-		} catch(Exception e){
+
+			levels = (Levels) jaxbUnmarshaller.unmarshal(file);
+
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
+
 	}
-	
-	public static void main(String args[]){
-		load();
-		
+
+	public static Levels getLevels() {
+		return levels;
 	}
-	
-	
+
 }

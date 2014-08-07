@@ -15,7 +15,6 @@ import display_components.MenuButton;
 
 public class MenuBar extends JPanel {
 
-	private static final Color BACKGROUND_COLOR = Color.LIGHT_GRAY;
 	private static Font ostrichBlack = null;
 	
 	private static ArrayList<MenuButton> buttons = new ArrayList<MenuButton>();
@@ -49,44 +48,44 @@ public class MenuBar extends JPanel {
 
 		// Sets the font size to 32
 		buffGraphics.setFont(ostrichBlack.deriveFont(32F));
-
+		
 		// Menu background - Black
 		buffGraphics.setColor(Color.BLACK);
 		buffGraphics.fillRect(0, 0, 300, 300);
 
 		// Menu background - green
-		buffGraphics.setColor(Color.decode("#4DB870"));
-		buffGraphics.fillRect(0, 1, 299, 198);
+		buffGraphics.setColor(Color.decode("#6fa3c2"));
+		buffGraphics.fillRect(0, 0, 299, 198);
 
 		// Button 1
-		buffGraphics.setColor(Color.decode("#4DB870").darker());
+		buffGraphics.setColor(Color.decode("#6fa3c2").darker());
 		buttons.add(new MenuButton("Test 1", 50, 25, 200, 40));
 		buttons.get(0).paint(buffGraphics);
 
 		// Button 2
-		buffGraphics.setColor(Color.decode("#4DB870").darker());
+		buffGraphics.setColor(Color.decode("#6fa3c2").darker());
 		buttons.add(new MenuButton("Test 2", 50, 80, 200, 40));
 		buttons.get(1).paint(buffGraphics);
 		
 		// Button 3
-		buffGraphics.setColor(Color.decode("#4DB870").darker());
+		buffGraphics.setColor(Color.decode("#6fa3c2").darker());
 		buttons.add(new MenuButton("Test 3", 50, 140, 200, 40));
 		buttons.get(2).paint(buffGraphics);
 		
 		
 		// MenuButton Conditionals
-		buffGraphics.setColor(Color.decode("#4DB870").darker());
+		buffGraphics.setColor(Color.decode("#6fa3c2").darker());
 		
 		if(buttonPressed.equals("button1")){
-			buffGraphics.setColor(Color.decode("#4DB870").darker().darker());
+			buffGraphics.setColor(Color.decode("#6fa3c2").darker().darker());
 		}
 		
 		buttons.get(0).paint(buffGraphics);
 		
-		buffGraphics.setColor(Color.decode("#4DB870").darker());
+		buffGraphics.setColor(Color.decode("#6fa3c2").darker());
 		
 		if(buttonPressed.equals("button2")){
-			buffGraphics.setColor(Color.decode("#4DB870").darker().darker());
+			buffGraphics.setColor(Color.decode("#6fa3c2").darker().darker());
 		}
 		buttons.get(1).paint(buffGraphics);
 
